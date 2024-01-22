@@ -12,7 +12,7 @@ export default function PR2() {
   const [Second10, setSecond10] = useState(0);
   let [Second, setSecond] = useState(0);
 
-  let [UserSecond, setUserSecond] = useState(0);
+  // let [UserSecond, setUserSecond] = useState(0);
 
   let [Start, setStart] = useState(false);
   let [Stop, setStop] = useState(true);

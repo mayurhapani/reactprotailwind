@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+.pr2 {
+  background: #000;
+  background-image: url("https://images.unsplash.com/photo-1568870217912-18f8e402efb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
+  background-size: cover;
+  color: #fff;
+}
+
+.counter {
+  background: #0088ff;
+  display: inline-block;
+  min-width: 100px;
+  border-radius: 10px;
+}
+.counter > p {
+  text-transform: uppercase;
+  background: #0069ff;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+}
+.bg-color {
+  background: #0088ff;
+}

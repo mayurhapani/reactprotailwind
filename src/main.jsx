@@ -14,3 +14,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <TICTOKTEK />
   </React.StrictMode>
 );
+
+// if you don't find projects then
+// uncomment only belowe components
+
+// PR1 is project  1
+// PR2A is project 2
+
+// PR2 is extra work
+// tictoktek is extra work

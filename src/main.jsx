@@ -8,10 +8,10 @@ import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <PR1 /> */}
+    <PR1 />
     {/* <PR2 /> */}
-    {/* <PR2A /> */}
-    <TICTOKTEK />
+    <PR2A />
+    {/* <TICTOKTEK /> */}
   </React.StrictMode>
 );
 

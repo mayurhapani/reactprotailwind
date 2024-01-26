@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <PR1 />
     {/* <PR2 /> */}
     <PR2A />
-    {/* <TICTOKTEK /> */}
+    <TICTOKTEK />
   </React.StrictMode>
 );
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import allUserData from "./allUserData.js";
+// import allUserData from "./allUserData.js";
 
 export default function TableBody() {
   // console.log(allUserData);

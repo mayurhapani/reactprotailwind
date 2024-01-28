@@ -1,11 +1,19 @@
 // "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./pr3.module.css";
-import TableBody from "./TableBody";
+// import TableBody from "./TableBody";
 import allUserData from "./allUserData.js";
 import DataTable from "./DataTable.jsx";
 
 export default function PR3() {
+  let [display, setDisplay] = useState(allUserData);
+
+  useEffect(() => {
+    console.log("deleted");
+
+    localStorage.setItem("allUserData", JSON.stringify(allUserData));
+  }, [display]);
+
   const submited = (e) => {
     e.preventDefault();
 
@@ -38,10 +46,10 @@ export default function PR3() {
       uCorse,
       uAddress,
     });
-    localStorage.setItem("allUserData", JSON.stringify(allUserData));
+    setDisplay(localStorage.setItem("allUserData", JSON.stringify(allUserData)));
     alert("Registration Successfull");
 
-    console.log(allUserData);
+    // console.log(allUserData);
     // console.log(uName, uEmail, uPass);
     // console.log(uGenderMale, uGenderFemale);
     // console.log(uReadding, uCycling, uTraveling);
@@ -130,25 +138,7 @@ export default function PR3() {
       <div className={Style.container}>
         <div className={Style.loginWrapTable}>
           <div className={Style.loginHtml}>
-            <DataTable />
-
-            {/* <table className={Style.table}>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email ID</th>
-                  <th>Password</th>
-                  <th>Gender</th>
-                  <th>Hobbies</th>
-                  <th>Corse</th>
-                  <th>Address</th>
-                  <th>Options</th>
-                </tr>
-              </thead>
-              <tbody>
-                <TableBody />
-              </tbody>
-            </table> */}
+            <DataTable display={display} setDisplay={setDisplay} />
           </div>
         </div>
       </div>

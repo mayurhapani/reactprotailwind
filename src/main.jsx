@@ -9,9 +9,9 @@ import PR3 from "./PR3/PR3.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <PR1 /> */}
+    <PR1 />
     {/* <PR2 /> */}
-    {/* <PR2A /> */}
+    <PR2A />
     {/* <TICTOKTEK /> */}
     <PR3 />
   </React.StrictMode>

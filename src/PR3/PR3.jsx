@@ -1,16 +1,20 @@
-// "use client";
 import React, { useEffect, useState } from "react";
-// import React from "react";
 import Style from "./pr3.module.css";
-// import TableBody from "./TableBody";
-import allUserData from "./allUserData.js";
-import DataTable from "./DataTable.jsx";
-import { data } from "autoprefixer";
 
 export default function PR3() {
-  let [display, setDisplay] = useState();
-  console.log(display);
-  // let allUserData = [];
+  let [display, setDisplay] = useState({
+    uName: "",
+    uEmail: "",
+    uPass: "",
+    uGender: "",
+    hobbies: {
+      uReadding: "",
+      uCycling: "",
+      uTraveling: "",
+    },
+    uCorse: "",
+    uAddress: "",
+  });
 
   const submited = (e) => {
     e.preventDefault();
@@ -20,7 +24,6 @@ export default function PR3() {
     let uPass = e.target.pass.value;
 
     let uGenderMale = e.target.male.checked;
-    // let uGenderFemale = e.target.female.checked;
 
     let uReadding = e.target.readding.checked;
     let uCycling = e.target.cycling.checked;
@@ -44,36 +47,8 @@ export default function PR3() {
     };
 
     setDisplay(Data);
-    // let allUserData = JSON.parse(localStorage.getItem("allUserData")) || [];
-
-    // allUserData.push({
-    //   uName,
-    //   uEmail,
-    //   uPass,
-    //   uGender: uGenderMale ? "male" : "female",
-    //   hobbies: {
-    //     uReadding: uReadding ? "readding" : null,
-    //     uCycling: uCycling ? "cycling" : null,
-    //     uTraveling: uTraveling ? "traveling" : null,
-    //   },
-    //   uCorse,
-    //   uAddress,
-    // });
-
-    // console.log(allUserData);
-    // setDisplay(localStorage.setItem("allUserData", JSON.stringify(allUserData)));
     alert("Registration Successfull");
-
-    // console.log(allUserData);
-    // console.log(uName, uEmail, uPass);
-    // console.log(uGenderMale, uGenderFemale);
-    // console.log(uReadding, uCycling, uTraveling);
-    // console.log(uCorse, uAddress);
   };
-
-  // useEffect(() => {
-  //   console.log("deleted");
-  // }, [allUserData]);
 
   const outputall = (
     <>
@@ -156,7 +131,30 @@ export default function PR3() {
       <div className={Style.container}>
         <div className={Style.loginWrapTable}>
           <div className={Style.loginHtml}>
-            <DataTable />
+            <table className={Style.table}>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email ID</th>
+                  <th>Password</th>
+                  <th>Gender</th>
+                  <th>Hobbies</th>
+                  <th>Corse</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{display.uName}</td>
+                  <td>{display.uEmail}</td>
+                  <td>{display.uPass}</td>
+                  <td>{display.uGender}</td>
+                  <td>{display.hobbies.uReadding}</td>
+                  <td>{display.uCorse}</td>
+                  <td>{display.uAddress}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

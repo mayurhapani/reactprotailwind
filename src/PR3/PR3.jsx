@@ -1,18 +1,16 @@
 // "use client";
 import React, { useEffect, useState } from "react";
+// import React from "react";
 import Style from "./pr3.module.css";
 // import TableBody from "./TableBody";
 import allUserData from "./allUserData.js";
 import DataTable from "./DataTable.jsx";
+import { data } from "autoprefixer";
 
 export default function PR3() {
-  let [display, setDisplay] = useState(allUserData);
-
-  useEffect(() => {
-    console.log("deleted");
-
-    localStorage.setItem("allUserData", JSON.stringify(allUserData));
-  }, [display]);
+  let [display, setDisplay] = useState();
+  console.log(display);
+  // let allUserData = [];
 
   const submited = (e) => {
     e.preventDefault();
@@ -31,9 +29,7 @@ export default function PR3() {
     let uCorse = e.target.corse.value;
     let uAddress = e.target.address.value;
 
-    // let allUserData = JSON.parse(localStorage.getItem("allUserData")) || [];
-
-    allUserData.push({
+    let Data = {
       uName,
       uEmail,
       uPass,
@@ -45,8 +41,27 @@ export default function PR3() {
       },
       uCorse,
       uAddress,
-    });
-    setDisplay(localStorage.setItem("allUserData", JSON.stringify(allUserData)));
+    };
+
+    setDisplay(Data);
+    // let allUserData = JSON.parse(localStorage.getItem("allUserData")) || [];
+
+    // allUserData.push({
+    //   uName,
+    //   uEmail,
+    //   uPass,
+    //   uGender: uGenderMale ? "male" : "female",
+    //   hobbies: {
+    //     uReadding: uReadding ? "readding" : null,
+    //     uCycling: uCycling ? "cycling" : null,
+    //     uTraveling: uTraveling ? "traveling" : null,
+    //   },
+    //   uCorse,
+    //   uAddress,
+    // });
+
+    // console.log(allUserData);
+    // setDisplay(localStorage.setItem("allUserData", JSON.stringify(allUserData)));
     alert("Registration Successfull");
 
     // console.log(allUserData);
@@ -56,13 +71,16 @@ export default function PR3() {
     // console.log(uCorse, uAddress);
   };
 
-  return (
+  // useEffect(() => {
+  //   console.log("deleted");
+  // }, [allUserData]);
+
+  const outputall = (
     <>
       <div className={Style.container}>
         <div className={Style.loginWrap}>
           <div className={Style.loginHtml}>
             <h2 className={Style.tab}>Sign In</h2>
-            <h2 className={Style.tab}>List</h2>
 
             <div className={Style.loginForm}>
               <form onSubmit={submited} className={Style.signInHtm}>
@@ -138,10 +156,12 @@ export default function PR3() {
       <div className={Style.container}>
         <div className={Style.loginWrapTable}>
           <div className={Style.loginHtml}>
-            <DataTable display={display} setDisplay={setDisplay} />
+            <DataTable />
           </div>
         </div>
       </div>
     </>
   );
+
+  return outputall;
 }

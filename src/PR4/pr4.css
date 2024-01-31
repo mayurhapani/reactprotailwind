@@ -151,3 +151,60 @@
 .rating:not(:checked) > label:hover ~ label:before {
   color: #f9df4a;
 }
+
+/* cards */
+.card {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px 0;
+  border-color: var(--main-purple);
+}
+.userName {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: inline-block;
+}
+.userEmail {
+  color: rgba(99, 99, 99, 0.76);
+}
+.userComment {
+  color: rgba(110, 110, 110, 0.692);
+  padding-top: 10px;
+}
+.cardRating {
+  /* width: 250px; */
+  height: 50px;
+  margin: 0 0;
+  padding: 10px 0px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+.cardRating label {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.cardRating label:before {
+  content: "\2605";
+  font-size: 42px;
+  line-height: 1;
+  color: #f9df4a;
+  /* color: #ccc; */
+}
+
+.cardRating input {
+  display: none;
+}
+
+.cardRating input:checked ~ label:before {
+  color: #ccc;
+  /* color: #f9df4a; */
+}

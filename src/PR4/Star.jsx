@@ -5,7 +5,7 @@ export default function Star(props) {
   const uValue = props.value;
 
   if (uRating >= uValue) {
-    console.log(uRating, uValue);
+    // console.log(uRating, uValue);
     return (
       <>
         <label htmlFor={uValue}></label>
@@ -13,7 +13,7 @@ export default function Star(props) {
       </>
     );
   } else {
-    console.log(uRating, uValue);
+    // console.log(uRating, uValue);
     return (
       <>
         <label></label>

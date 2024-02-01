@@ -1,37 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./pr4.css";
-import { data } from "autoprefixer";
-import Star from "./Star";
-// import UserCard from "./UserCard";
 
 export default function PR4() {
   const [display, setDisplay] = useState({
     uName: "",
     uEmail: "",
-    rating: "",
     uComment: "",
   });
-
-  const [rating, setRating] = useState(0);
-  // console.log(rating);
-
-  const handleRatingChange = (event) => {
-    // console.log(event.target.value);
-    setRating(event.target.value);
-  };
 
   let allComments = JSON.parse(localStorage.getItem("allComments")) || [
     {
       uName: "Mayur",
       uEmail: "mayur@gmail.com",
-      rating: "5",
       uComment:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
     {
       uName: "Divyang",
       uEmail: "divyang@gmail.com",
-      rating: "5",
       uComment:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
@@ -48,7 +34,6 @@ export default function PR4() {
     let Data = {
       uName,
       uEmail,
-      rating,
       uComment,
     };
 
@@ -87,22 +72,6 @@ export default function PR4() {
               </div>
 
               <div className="input__box2">
-                <span className="details">Rate Us</span>
-                <div className="rating" id="uStar">
-                  <input type="radio" id="star5" name="rating" value="5" onChange={handleRatingChange} />
-                  <label htmlFor="star5"></label>
-                  <input type="radio" id="star4" name="rating" value="4" onChange={handleRatingChange} />
-                  <label htmlFor="star4"></label>
-                  <input type="radio" id="star3" name="rating" value="3" onChange={handleRatingChange} />
-                  <label htmlFor="star3"></label>
-                  <input type="radio" id="star2" name="rating" value="2" onChange={handleRatingChange} />
-                  <label htmlFor="star2"></label>
-                  <input type="radio" id="star1" name="rating" value="1" onChange={handleRatingChange} />
-                  <label htmlFor="star1"></label>
-                </div>
-              </div>
-
-              <div className="input__box2">
                 <span className="details">Comment</span>
                 <textarea id="uComment" className="input input2" placeholder="Enter Your comment" rows="6" required></textarea>
               </div>
@@ -118,7 +87,7 @@ export default function PR4() {
       <div className="container">
         <div className="InputBox">
           <div className="title">All User Reviews</div>
-          {allComments.map((user, index) => (
+          {allComments.map((user) => (
             <>
               <div className="card">
                 <div className="flex justify-between">
@@ -126,15 +95,6 @@ export default function PR4() {
                   <span className="userEmail">{user.uEmail}</span>
                 </div>
 
-                <div className="cardRating">
-                  <form>
-                    <Star key={index} rating={user.rating} value={1} />
-                    <Star key={index} rating={user.rating} value={2} />
-                    <Star key={index} rating={user.rating} value={3} />
-                    <Star key={index} rating={user.rating} value={4} />
-                    <Star key={index} rating={user.rating} value={5} />
-                  </form>
-                </div>
                 <p className="userComment">{user.uComment}</p>
               </div>
             </>

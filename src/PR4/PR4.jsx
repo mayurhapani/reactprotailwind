@@ -45,11 +45,26 @@ export default function PR4() {
     let uEmail = e.target.uEmail.value;
     let uComment = e.target.uComment.value;
 
+    function padZero(num) {
+      return num < 10 ? `0${num}` : num;
+    }
+    let currentDate = new Date();
+
+    const newDay = padZero(currentDate.getDate());
+    const month = padZero(currentDate.getMonth() + 1); // Month is zero-based
+    const year = currentDate.getFullYear();
+    const hours = padZero(currentDate.getHours());
+    const minutes = padZero(currentDate.getMinutes());
+    const seconds = padZero(currentDate.getSeconds());
+
+    let uDate={newDay + "/" + month + "/"+year + hours + ":" + minutes + ":" + seconds}
+
     let Data = {
       uName,
       uEmail,
       rating,
       uComment,
+      uDate,
     };
 
     // console.log(Data);
@@ -136,6 +151,8 @@ export default function PR4() {
                   </form>
                 </div>
                 <p className="userComment">{user.uComment}</p>
+
+                <div className="uDate">{user.uDate}</div>
               </div>
             </>
           ))}

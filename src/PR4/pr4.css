@@ -208,3 +208,7 @@
   color: #ccc;
   /* color: #f9df4a; */
 }
+
+.uDate {
+  text-align: end;
+}

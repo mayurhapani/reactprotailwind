@@ -27,6 +27,14 @@ export default function PR4() {
       rating: "5",
       uComment:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+      uDate: {
+        newDay: "31",
+        month: "01",
+        year: "2024",
+        hours: "03",
+        minutes: "12",
+        ampm: "AM",
+      },
     },
     {
       uName: "Divyang",
@@ -34,6 +42,14 @@ export default function PR4() {
       rating: "5",
       uComment:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+      uDate: {
+        newDay: "01",
+        month: "02",
+        year: "2024",
+        hours: "06",
+        minutes: "24",
+        ampm: "AM",
+      },
     },
   ];
   // let allComments = [];
@@ -55,16 +71,27 @@ export default function PR4() {
     const year = currentDate.getFullYear();
     const hours = padZero(currentDate.getHours());
     const minutes = padZero(currentDate.getMinutes());
-    const seconds = padZero(currentDate.getSeconds());
 
-    let uDate={newDay + "/" + month + "/"+year + hours + ":" + minutes + ":" + seconds}
+    // let uDate = { newDay, month, year, hours, minutes };
+    // console.log(uDate);
+
+    const ampm = hours >= 12 ? "PM" : "AM";
+
+    const formattedHours = hours % 12 || 12;
 
     let Data = {
       uName,
       uEmail,
       rating,
       uComment,
-      uDate,
+      uDate: {
+        newDay,
+        month,
+        year,
+        hours: formattedHours,
+        minutes,
+        ampm,
+      },
     };
 
     // console.log(Data);
@@ -152,7 +179,10 @@ export default function PR4() {
                 </div>
                 <p className="userComment">{user.uComment}</p>
 
-                <div className="uDate">{user.uDate}</div>
+                <div className="uDate">
+                  {user.uDate.newDay} / {user.uDate.month} / {user.uDate.year} <br />
+                  {user.uDate.hours} : {user.uDate.minutes} {user.uDate.ampm}
+                </div>
               </div>
             </>
           ))}

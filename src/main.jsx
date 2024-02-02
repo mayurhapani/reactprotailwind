@@ -7,6 +7,8 @@ import PR2A from "./PR2/PR2A.jsx";
 import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";
 import PR3 from "./PR3/PR3.jsx";
 import PR4 from "./PR4/PR4.jsx";
+import CounterMainPage from "./ContextApi/CounterMainPage.jsx";
+import { CounterProvider } from "./ContextApi/context/Counter.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,6 +18,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <TICTOKTEK /> */}
     {/* <PR3 /> */}
     <PR4 />
+    <CounterProvider>
+      <CounterMainPage />
+    </CounterProvider>
   </React.StrictMode>
 );
 

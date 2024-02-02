@@ -39,7 +39,7 @@ export default function PR4() {
     {
       uName: "Divyang",
       uEmail: "divyang@gmail.com",
-      rating: "5",
+      rating: "4",
       uComment:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       uDate: {
@@ -180,8 +180,12 @@ export default function PR4() {
                 <p className="userComment">{user.uComment}</p>
 
                 <div className="uDate">
-                  {user.uDate.newDay} / {user.uDate.month} / {user.uDate.year} <br />
-                  {user.uDate.hours} : {user.uDate.minutes} {user.uDate.ampm}
+                  <span>
+                    {user.uDate.newDay} / {user.uDate.month} / {user.uDate.year}
+                  </span>
+                  <span className="ps-5">
+                    {user.uDate.hours} : {user.uDate.minutes} {user.uDate.ampm}
+                  </span>
                 </div>
               </div>
             </>

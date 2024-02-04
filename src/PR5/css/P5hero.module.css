@@ -1,0 +1,61 @@
+.subTitle {
+  display: inline-block;
+  color: #ff451b;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.name {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 22px;
+  color: #fff;
+}
+.text {
+  color: #a7afbd;
+  font-size: 24px;
+  margin-bottom: 27px;
+  display: inline-block;
+  padding-right: 80px;
+}
+
+.heroImage {
+  position: relative;
+}
+.heroImage img {
+  position: relative;
+  opacity: 0;
+  min-width: 100%;
+}
+.heroMain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+.heroMain:before {
+  position: absolute;
+  content: "";
+  top: 24px;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: #ffb324;
+  z-index: -1;
+  transform: rotate(-50deg);
+  animation: animeRotate 13s linear 0s infinite alternate;
+}
+@keyframes animeRotate {
+  0% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}

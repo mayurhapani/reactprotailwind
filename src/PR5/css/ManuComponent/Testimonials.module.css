@@ -1,0 +1,125 @@
+.main_section {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  border-radius: 10px;
+  background-color: #494b50;
+  padding: 70px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.testimonialsMain {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  color: #fff;
+}
+.main_title {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  /* position: relative; */
+  /* margin-bottom: 100px; */
+
+  padding-right: 50%;
+}
+.main_title span {
+  font-size: 21px;
+  color: #ff451b;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.main_title h3 {
+  font-size: 47px;
+  font-weight: 900;
+}
+
+.testimonials_list,
+.list_inner,
+.list_inner_in {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+
+.testimonials_list {
+  padding-top: 68px;
+  display: flex;
+  gap: 15px;
+}
+.list_inner {
+  background-color: #5b5c64;
+  border-radius: 15px;
+
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.list_inner_in {
+  box-shadow: 7px 7px 98px rgba(9, 47, 104, 0.07);
+  border-radius: 15px;
+  padding: 52px 60px 60px;
+}
+.list_inner_text {
+  width: 100%;
+  float: left;
+  margin-bottom: 28px;
+}
+.list_inner_text p {
+  font-size: 21px;
+  font-style: italic;
+}
+.list_inner_details {
+  width: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonials_list_left {
+  display: flex;
+  align-items: center;
+}
+.testimonials_list_avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.testimonials_list_main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+}
+.testimonials_list_info {
+  padding-left: 20px;
+}
+.testimonials_list_info h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.testimonials_list_info span {
+  font-size: 16px;
+  color: #aaa;
+}
+.testimonials_list_right_svg {
+  width: 50px;
+  height: 50px;
+  color: #ffb324;
+}

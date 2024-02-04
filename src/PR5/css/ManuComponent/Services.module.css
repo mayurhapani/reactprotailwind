@@ -1,0 +1,114 @@
+.main_section {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  border-radius: 10px;
+  background-color: #494b50;
+  padding: 70px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ServicesMain {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  color: #fff;
+}
+.main_title {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  /* position: relative; */
+  /* margin-bottom: 100px; */
+
+  padding-right: 50%;
+}
+.main_title span {
+  font-size: 21px;
+  color: #ff451b;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.main_title h3 {
+  font-size: 47px;
+  font-weight: 900;
+}
+
+.service_list {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  padding-top: 70px;
+}
+.service_list ul {
+  margin: 0 0 0 -25px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.service_list ul li {
+  margin: 0 0 25px;
+  width: 33.3333%;
+  float: left;
+  padding-left: 25px;
+}
+.list_inner {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  padding: 60px 40px 58px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #5c5d64;
+  box-shadow: 7px 7px 98px rgba(9, 47, 104, 0.07);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.list_inner:hover {
+  box-shadow: 7px 7px 98px rgba(9, 47, 104, 0.15);
+}
+.list_inner_icon {
+  display: inline-block;
+  width: 107px;
+  height: 107px;
+  background-color: #ffb324;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+.list_inner_svg {
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.list_inner_title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.full_link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}

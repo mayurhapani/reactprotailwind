@@ -46,6 +46,7 @@ export default function TICTOKTEK() {
         <>
           {isWinner} Is winner
           <button
+            className="button1"
             onClick={() => {
               setTurn(Array(9).fill(null));
             }}

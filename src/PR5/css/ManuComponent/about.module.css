@@ -1,0 +1,135 @@
+/* about page */
+
+.main_section {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  border-radius: 10px;
+  background-color: #494b50;
+  padding: 70px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.aboutMain {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  display: flex;
+}
+.left {
+  width: 50%;
+  position: relative;
+}
+.left_inner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+}
+.image {
+  position: relative;
+  min-width: 60%;
+}
+.image img {
+  position: relative;
+  min-width: 100%;
+  opacity: 0;
+}
+.mainImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+.details {
+  position: relative;
+  min-width: 47%;
+  left: -55px;
+  margin-top: 55px;
+  background-color: #ff451b;
+  padding: 36px 40px 35px;
+  z-index: 1;
+  border-radius: 15px;
+}
+.details ul {
+  margin: 0;
+  list-style-type: none;
+}
+.details ul li {
+  margin: 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 13px 0;
+}
+.details ul li:first-child {
+  padding-top: 0;
+}
+.details ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.details h3 {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 2px;
+  opacity: 0.85;
+}
+.details span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.right {
+  width: 50%;
+  padding-left: 75px;
+  position: relative;
+  top: -8px;
+  color: #fff;
+}
+.right_main_title {
+  width: 100%;
+  /* max-width: 45%; */
+  height: auto;
+  clear: both;
+  float: left;
+}
+.right_main_title span {
+  font-size: 21px;
+  color: #ff451b;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.right_main_title h3 {
+  font-size: 47px;
+  font-weight: 900;
+}
+.bigger_text {
+  width: 100%;
+  float: left;
+  padding: 25px 0;
+}
+.bigger_text p {
+  font-size: 21px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.6;
+}
+.rightText {
+  width: 100%;
+  float: left;
+  margin-bottom: 38px;
+}

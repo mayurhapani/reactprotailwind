@@ -1,0 +1,328 @@
+.main_section {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  border-radius: 10px;
+  background-color: #494b50;
+  padding: 70px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.resumeMain {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  color: #fff;
+}
+.main_title {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+  margin-bottom: 100px;
+}
+.main_title span {
+  font-size: 21px;
+  color: #ff451b;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.main_title h3 {
+  font-size: 47px;
+  font-weight: 900;
+}
+
+.resume_inner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: flex;
+}
+.resume_inner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: flex;
+}
+.resume_title {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
+.resume_title h3 {
+  font-size: 36px;
+  font-weight: 700;
+  padding-left: 40px;
+}
+.shape {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border: 3px solid #ff451b;
+}
+.shape:before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #ff451b;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  width: 50%;
+  padding-right: 30px;
+}
+.info_list {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  /* margin-bottom: 67px; */
+}
+.info_list ul {
+  margin: 38px 0 0;
+  float: left;
+  list-style-type: none;
+}
+.info_list ul li {
+  width: 100%;
+  float: left;
+  margin: 0 0 45px;
+}
+.info_list ul li:last-child {
+  margin-bottom: 0;
+}
+.list_inner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
+.short {
+  width: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.job {
+  padding-right: 20px;
+}
+.job h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.job span {
+  font-size: 20px;
+  color: #555;
+}
+.year span {
+  font-size: 20px;
+  color: #ff451b;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 8px 35px 7px;
+  white-space: nowrap;
+}
+.resumeText {
+  width: 100%;
+  float: left;
+  margin-top: 18px;
+}
+
+.right {
+  width: 50%;
+  padding-left: 30px;
+}
+.personal {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.dodo_progress {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  padding-top: 40px;
+  overflow: hidden;
+}
+.progress_inner {
+  width: 100%;
+  margin-bottom: 23px;
+}
+.progress_inner:last-child {
+  margin-bottom: 0;
+}
+.progress_inner > span {
+  margin: 0 0 20px;
+  display: block;
+  text-align: left;
+  position: relative;
+}
+.label {
+  /* opacity: 0; */
+  /* transform: translateY(10px); */
+  display: block;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* .label.opened {
+  opacity: 1;
+  transform: translateY(0px);
+} */
+.number {
+  float: right;
+  position: absolute;
+  right: 100%;
+  bottom: -5px;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #ff451b;
+  font-family: poppins;
+}
+.background {
+  background: #e2e7ec;
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  height: 8px;
+  border-radius: 50px;
+}
+.bar_in {
+  height: 5px;
+  background: #ff451b;
+  width: 90%;
+  /* width: 0; */
+  overflow: hidden;
+  border-radius: 50px;
+  position: relative;
+  top: -7px;
+}
+.bar {
+  width: 0;
+  height: 100%;
+}
+.bar {
+  -webkit-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+@-webkit-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes wow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.software {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.circular_progress_bar {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  margin-top: 40px;
+}
+.circular_progress_bar ul {
+  margin: 0 0 0 -75px;
+  list-style-type: none;
+}
+.circular_progress_bar ul li {
+  margin: 0 0 45px;
+  width: 50%;
+  float: left;
+  padding-left: 75px;
+}
+.myCircle {
+  position: relative;
+  /* float: left; */
+}
+.list_inner2 {
+  width: 100%;
+  /* height: 100%; */
+  position: relative;
+  text-align: center;
+}
+.list_inner2:after {
+  content: "";
+  position: absolute;
+  width: 199px;
+  height: 199px;
+  border: 6px solid #eee;
+  left: 7px;
+  top: 7px;
+  z-index: -1;
+  border-radius: 50%;
+  z-index: 11;
+  box-sizing: border-box;
+}
+.title {
+  width: 100%;
+  max-width: 213px;
+  float: left;
+  padding-top: 14px;
+}
+.title h3 {
+  font-size: 21px;
+  font-weight: 700;
+}
+.myCircle .number {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  /* transform: translate(-50%, -50%); */
+  color: #ff451b;
+  font-size: 30px;
+  font-weight: 400;
+}

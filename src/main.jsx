@@ -10,15 +10,18 @@ import PR4 from "./PR4/PR4.jsx";
 import CounterMainPage from "./ContextApi/CounterMainPage.jsx";
 import { CounterProvider } from "./ContextApi/context/Counter.jsx";
 import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
+import PR5 from "./PR5/PR5.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <PR1 /> */}
-    {/* <PR2 /> */}
     {/* <PR2A /> */}
-    {/* <TICTOKTEK /> */}
     {/* <PR3 /> */}
     <PR4 />
+    <PR5 />
+
+    {/* <PR2 /> */}
+    {/* <TICTOKTEK /> */}
     {/* <CounterProvider>
       <CounterMainPage />
     </CounterProvider> */}

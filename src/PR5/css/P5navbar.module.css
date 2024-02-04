@@ -1,0 +1,47 @@
+.headerOuter {
+  padding-top: 20px;
+  min-height: 80px;
+}
+.logoImg {
+  width: 95px;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 0 8px;
+}
+.svgSize {
+  width: 17px;
+  height: 17px;
+}
+
+.headerBtn {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.headerBtn {
+  width: auto;
+  margin-left: 30px;
+}
+.headerBtn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  background-color: #ff451b;
+  padding: 14px 50px;
+  border-radius: 10px;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.headerBtn a:hover {
+  background-color: #ffb324;
+}

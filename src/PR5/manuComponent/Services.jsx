@@ -5,7 +5,7 @@ import squares from "../public/svg/squares.svg";
 import physics from "../public/svg/physics.svg";
 import web from "../public/svg/web.svg";
 import user from "../public/svg/user.svg";
-import briefcase from "../public/svg/briefcase.svg";
+import briefcase from "../public/svg/briefcaseSer.svg";
 import writing_2 from "../public/svg/writing_2.svg";
 
 export default function Services() {

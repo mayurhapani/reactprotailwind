@@ -2,7 +2,7 @@ import React from "react";
 import Style from "../css/ManuComponent/Contect.module.css";
 
 import smartphone from "../public/svg/smartphone.svg";
-import letter from "../public/svg/letter.svg";
+import letter from "../public/svg/letterC.svg";
 import placeholder from "../public/svg/placeholder.svg";
 
 export default function Contect() {

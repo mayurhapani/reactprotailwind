@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+import Header from "./PR1/Header.jsx";
 import PR1 from "./PR1/PR1.jsx";
 import "./index.css";
 import PR2 from "./PR2/PR2.jsx";
@@ -12,21 +14,26 @@ import { CounterProvider } from "./ContextApi/context/Counter.jsx";
 import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
 import PR5 from "./PR5/PR5.jsx";
 
+import { BrowserRouter } from "react-router-dom";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <PR1 /> */}
-    {/* <PR2A /> */}
-    {/* <PR3 /> */}
-    <PR4 />
-    <PR5 />
+    <Header />
+    <BrowserRouter>
+      <PR1 />
+      {/* <PR2A /> */}
+      {/* <PR3 /> */}
+      {/* <PR4 /> */}
+      {/* <PR5 /> */}
 
-    {/* <PR2 /> */}
-    {/* <TICTOKTEK /> */}
-    {/* <CounterProvider>
+      {/* <PR2 /> */}
+      {/* <TICTOKTEK /> */}
+      {/* <CounterProvider>
       <CounterMainPage />
     </CounterProvider> */}
 
-    {/* <Counter2MainPage /> */}
+      {/* <Counter2MainPage /> */}
+    </BrowserRouter>
   </React.StrictMode>
 );
 

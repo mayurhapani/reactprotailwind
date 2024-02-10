@@ -15,25 +15,27 @@ import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
 import PR5 from "./PR5/PR5.jsx";
 
 import { BrowserRouter } from "react-router-dom";
+import PR6 from "./PR6/PR6.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Header />
-    <BrowserRouter>
-      <PR1 />
-      {/* <PR2A /> */}
-      {/* <PR3 /> */}
-      {/* <PR4 /> */}
-      {/* <PR5 /> */}
+    {/* <Header /> */}
+    {/* <BrowserRouter> */}
+    {/* <PR1 /> */}
+    {/* <PR2A /> */}
+    {/* <PR3 /> */}
+    {/* <PR4 /> */}
+    {/* <PR5 /> */}
+    <PR6 />
 
-      {/* <PR2 /> */}
-      {/* <TICTOKTEK /> */}
-      {/* <CounterProvider>
+    {/* <PR2 /> */}
+    {/* <TICTOKTEK /> */}
+    {/* <CounterProvider>
       <CounterMainPage />
     </CounterProvider> */}
 
-      {/* <Counter2MainPage /> */}
-    </BrowserRouter>
+    {/* <Counter2MainPage /> */}
+    {/* </BrowserRouter> */}
   </React.StrictMode>
 );
 

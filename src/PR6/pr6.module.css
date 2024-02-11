@@ -48,7 +48,7 @@
   display: inline-block;
   border-bottom: 2px solid transparent;
 
-  color: #fff;
+  color: #ffffff;
   border-color: #1161ee;
 }
 .loginForm {
@@ -62,7 +62,7 @@
 .input,
 .button {
   width: 100%;
-  color: #fff;
+  color: #000a3f;
   display: block;
 }
 .input,
@@ -72,6 +72,9 @@
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.1);
 }
+/* .input:focus {
+  background: rgba(255, 255, 255, 0.1);
+} */
 .checkLabel {
   color: #ffffff;
   font-weight: 300;
@@ -129,4 +132,9 @@
   padding: 10px 0;
   font-weight: 300;
   border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+}
+.smButton {
+  border: 1px solid black;
+  padding: 2px;
+  margin: 4px;
 }

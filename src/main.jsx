@@ -15,7 +15,7 @@ import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
 import PR5 from "./PR5/PR5.jsx";
 
 import { BrowserRouter } from "react-router-dom";
-import PR6 from "./PR6/PR6.jsx";
+import PR6 from "./PR6/PR6a.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

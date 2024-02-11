@@ -1,32 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import Header from "./PR1/Header.jsx";
-import PR1 from "./PR1/PR1.jsx";
 import "./index.css";
-import PR2 from "./PR2/PR2.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import MainHeader from "./component/MainHeader.jsx";
+import PR1 from "./PR1/PR1.jsx";
 import PR2A from "./PR2/PR2A.jsx";
-import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";
 import PR3 from "./PR3/PR3.jsx";
 import PR4 from "./PR4/PR4.jsx";
+import PR5 from "./PR5/PR5.jsx";
+import PR6 from "./PR6/PR6a.jsx";
+
+import PR2 from "./PR2/PR2.jsx";
+import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";
 import CounterMainPage from "./ContextApi/CounterMainPage.jsx";
 import { CounterProvider } from "./ContextApi/context/Counter.jsx";
 import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
-import PR5 from "./PR5/PR5.jsx";
-
-import { BrowserRouter } from "react-router-dom";
-import PR6 from "./PR6/PR6a.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <Header /> */}
-    {/* <BrowserRouter> */}
+    <MainHeader />
+    {/* <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PR1 />} />
+        <Route path="/pr2" element={<PR2 />} />
+        <Route path="/pr2a" element={<PR2A />} />
+        <Route path="/pr3" element={<PR3 />} />
+        <Route path="/pr4" element={<PR4 />} />
+        <Route path="/pr5" element={<PR5 />} />
+        <Route path="/pr6" element={<PR6 />} />
+        <Route path="/tictoktek" element={<TICTOKTEK />} />
+      </Routes>
+    </BrowserRouter> */}
     {/* <PR1 /> */}
     {/* <PR2A /> */}
     {/* <PR3 /> */}
     {/* <PR4 /> */}
     {/* <PR5 /> */}
-    <PR6 />
+    {/* <PR6 /> */}
 
     {/* <PR2 /> */}
     {/* <TICTOKTEK /> */}
@@ -35,7 +47,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </CounterProvider> */}
 
     {/* <Counter2MainPage /> */}
-    {/* </BrowserRouter> */}
   </React.StrictMode>
 );
 

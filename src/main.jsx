@@ -20,19 +20,19 @@ import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <MainHeader />
-    {/* <BrowserRouter>
+    <BrowserRouter>
+      <MainHeader />
       <Routes>
         <Route path="/" element={<PR1 />} />
-        <Route path="/pr2" element={<PR2 />} />
-        <Route path="/pr2a" element={<PR2A />} />
+        <Route path="/pr2" element={<PR2A />} />
         <Route path="/pr3" element={<PR3 />} />
         <Route path="/pr4" element={<PR4 />} />
         <Route path="/pr5" element={<PR5 />} />
         <Route path="/pr6" element={<PR6 />} />
         <Route path="/tictoktek" element={<TICTOKTEK />} />
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
+
     {/* <PR1 /> */}
     {/* <PR2A /> */}
     {/* <PR3 /> */}

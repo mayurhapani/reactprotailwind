@@ -7,7 +7,7 @@ import "./App.css";
 export default function Main() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <About />
       <Footer />

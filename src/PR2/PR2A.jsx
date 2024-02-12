@@ -83,7 +83,7 @@ export default function PR2A() {
   }
 
   return (
-    <div className="pr2">
+    <div className="pr2 pt-16">
       <div className="container">
         <div className="h-screen flex flex-col justify-center items-center">
           <div className="">

@@ -117,7 +117,7 @@ export default function PR6() {
 
   return (
     <>
-      <div className={Style.container}>
+      <div className={`${Style.container} pt-16`}>
         <div className={Style.loginWrap}>
           <div className={Style.loginHtml}>
             <h2 className={Style.tab}>Sign In</h2>

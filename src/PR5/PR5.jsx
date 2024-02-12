@@ -11,7 +11,7 @@ import P5fullMenu from "./P5fullMenu";
 
 export default function PR5() {
   return (
-    <div className="dark">
+    <div className="dark pt-16">
       {/* <div id="preloader">
         <div className="loader_line"></div>
       </div> */}

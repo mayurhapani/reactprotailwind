@@ -9,12 +9,14 @@ import ServicesImg from "./public/svg/gear.svg";
 import TestimonialImg from "./public/svg/message.svg";
 import BlogImg from "./public/svg/writing.svg";
 import ContactImg from "./public/svg/letter.svg";
+import { BrowserRouter, Link } from "react-router-dom";
 
 export default function P5menuBar() {
   return (
     <div className={`${Style.main_menu} pb-10`}>
       {/* <ul className="flex gap-2"> */}
       <ul className={Style.mainMenuUl}>
+        {/* <Link  /> */}
         <P5smallManu src={AboutImg} manuName={"About Me"} />
         <P5smallManu src={ResumeImg} manuName={"Resume"} />
         <P5smallManu src={PortfolioImg} manuName={"Portfolio"} />

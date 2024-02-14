@@ -20,7 +20,7 @@ import Contect from "./manuComponent/Contect";
 
 export default function PR5() {
   return (
-    <div className="dark pt-16">
+    <div className="dark ">
       {/* <div id="preloader">
         <div className="loader_line"></div>
       </div> */}
@@ -38,26 +38,18 @@ export default function PR5() {
         </div>
 
         <div className="iknow_tm_hero bg-[#1d1b1b] ">
-          <Routes>
-            <Route path="/about" element={<About />} />
-            {/* <Route path="/resume" element={<Resume />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contect" element={<Contect />} /> */}
-          </Routes>
-
-          {/* <About /> */}
-          {/* <Routes>
-            <Route path="/about" element={<About />} />
-          </Routes> */}
-          {/* <P5fullMenu /> */}
+          <div className="container">
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contect" element={<Contect />} />
+            </Routes>
+          </div>
         </div>
-
-        {/* <div className="iknow_tm_hero bg-[#1d1b1b] ">
-          <P5fullMenu />
-        </div> */}
 
         <div className="mouse-cursor cursor-outer"></div>
         <div className="mouse-cursor cursor-inner"></div>

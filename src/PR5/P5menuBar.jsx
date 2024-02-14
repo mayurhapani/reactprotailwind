@@ -16,14 +16,33 @@ export default function P5menuBar() {
     <div className={`${Style.main_menu} pb-10`}>
       {/* <ul className="flex gap-2"> */}
       <ul className={Style.mainMenuUl}>
-        {/* <Link  /> */}
-        <P5smallManu src={AboutImg} manuName={"About Me"} />
-        <P5smallManu src={ResumeImg} manuName={"Resume"} />
-        <P5smallManu src={PortfolioImg} manuName={"Portfolio"} />
-        <P5smallManu src={ServicesImg} manuName={"Service"} />
-        <P5smallManu src={TestimonialImg} manuName={"Testimonial"} />
-        <P5smallManu src={BlogImg} manuName={"Blog"} />
-        <P5smallManu src={ContactImg} manuName={"Contact"} />
+        <Link to={"/pr5/about"}>
+          <P5smallManu src={AboutImg} manuName={"About Me"} />
+        </Link>
+
+        <Link to={"/pr5/resume"}>
+          <P5smallManu src={ResumeImg} manuName={"Resume"} />
+        </Link>
+
+        <Link to={"/pr5/portfolio"}>
+          <P5smallManu src={PortfolioImg} manuName={"Portfolio"} />
+        </Link>
+
+        <Link to={"/pr5/services"}>
+          <P5smallManu src={ServicesImg} manuName={"Service"} />
+        </Link>
+
+        <Link to={"/pr5/testimonials"}>
+          <P5smallManu src={TestimonialImg} manuName={"Testimonial"} />
+        </Link>
+
+        <Link to={"/pr5/blog"}>
+          <P5smallManu src={BlogImg} manuName={"Blog"} />
+        </Link>
+
+        <Link to={"/pr5/contect"}>
+          <P5smallManu src={ContactImg} manuName={"Contact"} />
+        </Link>
       </ul>
     </div>
   );

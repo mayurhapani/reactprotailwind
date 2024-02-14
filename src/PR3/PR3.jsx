@@ -52,7 +52,7 @@ export default function PR3() {
 
   const outputall = (
     <>
-      <div className={`${Style.container} pt-16`}>
+      <div className={`${Style.container}`}>
         <div className={Style.loginWrap}>
           <div className={Style.loginHtml}>
             <h2 className={Style.tab}>Sign In</h2>

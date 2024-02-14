@@ -113,7 +113,7 @@ export default function PR4() {
 
   const outputall = (
     <>
-      <div className="container pt-16">
+      <div className="container">
         <div className="pr4Box">
           <div className="InputBox">
             <div className="title">Your Review</div>

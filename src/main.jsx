@@ -19,12 +19,12 @@ import { CounterProvider } from "./ContextApi/context/Counter.jsx";
 import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
 
 import About from "./PR5/manuComponent/About.jsx";
-import Resume from "./manuComponent/Resume";
-import Portfolio from "./manuComponent/Portfolio";
-import Services from "./manuComponent/Services";
-import Testimonials from "./manuComponent/Testimonials";
-import Blog from "./manuComponent/Blog";
-import Contect from "./manuComponent/Contect";
+import Resume from "./PR5/manuComponent/Resume.jsx";
+import Portfolio from "./PR5/manuComponent/Portfolio";
+import Services from "./PR5/manuComponent/Services";
+import Testimonials from "./PR5/manuComponent/Testimonials";
+import Blog from "./PR5/manuComponent/Blog";
+import Contect from "./PR5/manuComponent/Contect";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -37,13 +37,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/pr4" element={<PR4 />} />
         <Route path="/pr5" element={<PR5 />}>
           {/* <PR5 /> */}
-          <Route path="about" element={<About />} />
-          {/* <Route path="resume" element={<Resume />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="services" element={<Services />} />
-          <Route path="testimonials" element={<Testimonials />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="contect" element={<Contect />} /> */}
+          <Route path="about" />
+          <Route path="resume" />
+          <Route path="portfolio" />
+          <Route path="services" />
+          <Route path="testimonials" />
+          <Route path="blog" />
+          <Route path="contect" />
         </Route>
         <Route path="/pr6" element={<PR6 />} />
         <Route path="/tictoktek" element={<TICTOKTEK />} />

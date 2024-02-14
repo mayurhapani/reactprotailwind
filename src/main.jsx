@@ -10,7 +10,7 @@ import PR2A from "./PR2/PR2A.jsx";
 import PR3 from "./PR3/PR3.jsx";
 import PR4 from "./PR4/PR4.jsx";
 import PR5 from "./PR5/PR5.jsx";
-import PR6 from "./PR6/PR6a.jsx";
+import PR6 from "./PR6/PR6.jsx";
 
 import PR2 from "./PR2/PR2.jsx";
 import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";

@@ -3,7 +3,7 @@ import Style from "./pr6.module.css";
 import { data } from "autoprefixer";
 // import TableRow from "./TableRow";
 
-export default function PR6() {
+export default function PR6a() {
   let [display, setDisplay] = useState(
     JSON.parse(localStorage.getItem("display")) ||
       [

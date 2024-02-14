@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Style from "./pr6.module.css";
+import { useParams } from "react-router-dom";
 
 export default function PR6() {
   const [display, setDisplay] = useState(JSON.parse(localStorage.getItem("display")) || []);
@@ -7,17 +8,19 @@ export default function PR6() {
   const [edit, setEdit] = useState(false);
   const [id, setId] = useState(false);
 
+  const prams = useParams();
+
   useEffect(() => {
     localStorage.setItem("display", JSON.stringify(display));
   }, [display]);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setInput((prevInput) => ({
-      ...prevInput,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value, type, checked } = e.target;
+  //   setInput((prevInput) => ({
+  //     ...prevInput,
+  //     [name]: type === "checkbox" ? checked : value,
+  //   }));
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +29,7 @@ export default function PR6() {
       const temp = [...display];
       temp[id] = input;
 
-      //   console.log(input);
+      console.log(input);
 
       setDisplay(temp);
       setEdit(false);
@@ -87,6 +90,14 @@ export default function PR6() {
     setId(index);
   };
 
+  const handleChange = (e) => {
+    // console.log(input);
+    // console.log(e.target.name);
+    setInput({ ...input, [e.target.name]: e.target.value });
+    // console.log({ ...input, [e.target.name]: [e.target.value] });
+    // setInput();
+  };
+
   return (
     <>
       <div className={Style.container}>
@@ -135,9 +146,9 @@ export default function PR6() {
                     id="male"
                     name="gender"
                     type="radio"
-                    // checked={input ? (input.uGender === "male" ? true : false) : true}
-
-                    // onChange={handleChange}
+                    value={"male"}
+                    checked={input.gender === "male" ? true : false}
+                    onChange={handleChange}
                   />
                   <label htmlFor="male" className="ps-2 pe-20">
                     Male
@@ -146,8 +157,10 @@ export default function PR6() {
                     id="female"
                     name="gender"
                     type="radio"
+                    value={"female"}
+                    checked={input.gender === "female" ? true : false}
                     // checked={input ? input.uGender === "female" : false}
-                    // onChange={handleChange}
+                    onChange={handleChange}
                   />
                   <label htmlFor="female" className="ps-2">
                     Female

@@ -91,13 +91,8 @@ export default function PR6() {
   };
 
   const handleChange = (e) => {
-    // console.log(input);
-    // console.log(e.target.name);
     setInput({ ...input, [e.target.name]: e.target.value });
-    // console.log({ ...input, [e.target.name]: [e.target.value] });
-    // setInput();
   };
-
   return (
     <>
       <div className={Style.container}>

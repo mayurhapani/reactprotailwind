@@ -11,20 +11,9 @@ import PR3 from "./PR3/PR3.jsx";
 import PR4 from "./PR4/PR4.jsx";
 import PR5 from "./PR5/PR5.jsx";
 import PR6 from "./PR6/PR6.jsx";
+import PR7 from "./PR7/PR7.jsx";
 
-import PR2 from "./PR2/PR2.jsx";
 import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";
-import CounterMainPage from "./ContextApi/CounterMainPage.jsx";
-import { CounterProvider } from "./ContextApi/context/Counter.jsx";
-import Counter2MainPage from "./ContextAPI2/Counter2MainPage.jsx";
-
-import About from "./PR5/manuComponent/About.jsx";
-import Resume from "./PR5/manuComponent/Resume.jsx";
-import Portfolio from "./PR5/manuComponent/Portfolio";
-import Services from "./PR5/manuComponent/Services";
-import Testimonials from "./PR5/manuComponent/Testimonials";
-import Blog from "./PR5/manuComponent/Blog";
-import Contect from "./PR5/manuComponent/Contect";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -46,32 +35,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="contect" />
         </Route>
         <Route path="/pr6" element={<PR6 />} />
+        <Route path="/pr7" element={<PR7 />} />
         <Route path="/tictoktek" element={<TICTOKTEK />} />
       </Routes>
     </BrowserRouter>
-
-    {/* <PR1 /> */}
-    {/* <PR2A /> */}
-    {/* <PR3 /> */}
-    {/* <PR4 /> */}
-    {/* <PR5 /> */}
-    {/* <PR6 /> */}
-
-    {/* <PR2 /> */}
-    {/* <TICTOKTEK /> */}
-    {/* <CounterProvider>
-      <CounterMainPage />
-    </CounterProvider> */}
-
-    {/* <Counter2MainPage /> */}
   </React.StrictMode>
 );
-
-// if you don't find projects then
-// uncomment only belowe components
-
-// PR1 is project  1
-// PR2A is project 2
-
-// PR2 is extra work
-// tictoktek is extra work

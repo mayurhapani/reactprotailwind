@@ -35,7 +35,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="contect" />
         </Route>
         <Route path="/pr6" element={<PR6 />} />
-        <Route path="/pr7" element={<PR7 />} />
+        <Route path="/pr7/*" element={<PR7 />}>
+          <Route path="" />
+          <Route path="add" />
+          <Route path="edit" />
+          <Route path="edit/:index" />
+        </Route>
         <Route path="/tictoktek" element={<TICTOKTEK />} />
       </Routes>
     </BrowserRouter>

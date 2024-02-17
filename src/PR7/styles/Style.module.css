@@ -138,3 +138,6 @@
   padding: 2px;
   margin: 4px;
 }
+.error {
+  color: red;
+}

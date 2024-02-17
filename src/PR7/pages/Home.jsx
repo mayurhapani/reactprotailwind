@@ -7,9 +7,9 @@ export default function Home() {
   const [display, setDisplay] = useState(JSON.parse(localStorage.getItem("display")) || []);
   // const [input, setInput] = useState({});
 
-  // useEffect(() => {
-  //   localStorage.setItem("display", JSON.stringify(display));
-  // }, [display]);
+  useEffect(() => {
+    localStorage.setItem("display", JSON.stringify(display));
+  }, [display]);
 
   // console.log(display);
 
@@ -20,6 +20,7 @@ export default function Home() {
   };
 
   const handleEdit = (index) => {
+    // nevigetor(`/pr7/edit`);
     nevigetor(`/pr7/edit/${index}`);
   };
 

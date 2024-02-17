@@ -7,9 +7,10 @@ export default function Add() {
   const [display, setDisplay] = useState(JSON.parse(localStorage.getItem("display")) || []);
   const [input, setInput] = useState({});
   const [hobbies, setHobbies] = useState([]);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    localStorage.setItem("display", JSON.stringify(display));
+    -localStorage.setItem("display", JSON.stringify(display));
   }, [display]);
 
   useEffect(() => {
@@ -17,7 +18,6 @@ export default function Add() {
   }, [hobbies]);
 
   const handleChange = (e) => {
-    // console.log(e.target.value);
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
@@ -30,11 +30,59 @@ export default function Add() {
     }
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   localStorage.setItem("display", JSON.stringify([...display, input]));
+  //   alert("Registration Successful");
+  //   nevigetor("/pr7");
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("display", JSON.stringify([...display, input]));
-    alert("Registration Successful");
-    nevigetor("/pr7/");
+    const errors = validateForm(input);
+    if (Object.keys(errors).length === 0) {
+      localStorage.setItem("display", JSON.stringify([...display, input]));
+      alert("Registration Successful");
+      nevigetor("/pr7");
+    } else {
+      setErrors(errors);
+    }
+  };
+
+  const validateForm = (values) => {
+    let errors = {};
+
+    if (!values.user) {
+      errors.user = "Username is required";
+    }
+
+    if (!values.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+      errors.email = "Email address is invalid";
+    }
+
+    if (!values.pass) {
+      errors.pass = "Password is required";
+    }
+
+    if (!values.gender) {
+      errors.gender = "Gender is required";
+    }
+
+    if (hobbies.length === 0) {
+      errors.hobbies = "Select at least one hobby";
+    }
+
+    if (!values.course) {
+      errors.course = "Select your course";
+    }
+
+    if (!values.address) {
+      errors.address = "Address is required";
+    }
+
+    return errors;
   };
 
   return (
@@ -56,6 +104,7 @@ export default function Add() {
                     onChange={handleChange}
                     name="user"
                   />
+                  <span className={Style.error}>{errors?.user}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Email Id</label>
@@ -67,6 +116,7 @@ export default function Add() {
                     onChange={handleChange}
                     name="email"
                   />
+                  <span className={Style.error}>{errors?.email}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Choose Password</label>
@@ -78,6 +128,7 @@ export default function Add() {
                     onChange={handleChange}
                     name="pass"
                   />
+                  <span className={Style.error}>{errors?.pass}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Gender</label>
@@ -104,6 +155,8 @@ export default function Add() {
                   <label htmlFor="female" className="ps-2">
                     Female
                   </label>
+                  <br />
+                  <span className={Style.error}>{errors?.gender}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Hobbies</label>
@@ -140,6 +193,8 @@ export default function Add() {
                   <label htmlFor="traveling" className="ps-2">
                     Traveling
                   </label>
+                  <br />
+                  <span className={Style.error}>{errors?.hobbies}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Select Course</label>
@@ -160,10 +215,12 @@ export default function Add() {
                       Front End
                     </option>
                   </select>
+                  <span className={Style.error}>{errors?.course}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Your Address</label>
                   <textarea id="address" className={Style.input} rows="3" onChange={handleChange} name="address"></textarea>
+                  <span className={Style.error}>{errors?.address}</span>
                 </div>
                 <div className={Style.group}>
                   <input type="submit" className={Style.button} value={"Register"} />

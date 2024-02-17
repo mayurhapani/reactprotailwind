@@ -13,6 +13,7 @@ export default function PR7() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<Add />} />
+        {/* <Route path="/edit" element={<Edit />} /> */}
         <Route path="/edit/:index" element={<Edit />} />
       </Routes>
     </>

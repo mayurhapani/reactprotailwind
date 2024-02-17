@@ -5,13 +5,15 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function Home() {
   const nevigetor = useNavigate();
   const [display, setDisplay] = useState(JSON.parse(localStorage.getItem("display")) || []);
-  // const [input, setInput] = useState({});
+  const [input, setInput] = useState(display);
+  const [searchInput, setSearchInput] = useState("");
+  const [selectedGender, setSelectedGender] = useState("");
 
   useEffect(() => {
     localStorage.setItem("display", JSON.stringify(display));
   }, [display]);
 
-  // console.log(display);
+  // console.log(input);
 
   const handleDelete = (index) => {
     const temp = [...display];
@@ -28,13 +30,47 @@ export default function Home() {
     nevigetor("/pr8/add");
   };
 
+  // const handleSearch = (e) => {
+  //   setSelectedGender(e.target.value);
+
+  //   const filteredUsers = display.filter(
+  //     (user) =>
+  //       user.user.toLowerCase().includes(e.target.value.toLowerCase()) ||
+  //       (user.email.toLowerCase().includes(e.target.value.toLowerCase()) && (selectedGender === "" || user.gender === selectedGender))
+  //   );
+  //   setInput(filteredUsers);
+  // };
+
+  const handleSearch = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleGenderSelect = (e) => {
+    setSelectedGender(e.target.value);
+  };
+
+  const filteredUsers = display.filter(
+    (user) => user.user.toLowerCase().includes(searchInput.toLowerCase()) && (selectedGender === "" || user.gender === selectedGender)
+  );
+
   return (
     <>
       <div className={Style.container}>
         <div className={Style.loginWrapTable}>
           <div className={Style.loginHtml}>
             <h1 className="text-4xl text-white text-center my-5">User Data</h1>
-            <div className="flex justify-end">
+            <div className="flex justify-between mb-10">
+              <div className="">
+                <input onChange={handleSearch} type="text" placeholder="Search from here...." />
+                <select onChange={handleGenderSelect} className="mx-5" id="uGender">
+                  <option value="" selected disabled>
+                    Gender
+                  </option>
+                  <option value="">All</option>
+                  <option value="male">male</option>
+                  <option value="female">female</option>
+                </select>
+              </div>
               <button onClick={handelAdd} className="text-white border px-8 py-3 rounded-md bg-black">
                 Add
               </button>
@@ -54,7 +90,7 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
-                {display.map((user, index) => (
+                {filteredUsers?.map((user, index) => (
                   <tr key={index}>
                     <td>{user.user}</td>
                     <td>{user.email}</td>

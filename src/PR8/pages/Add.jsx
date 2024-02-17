@@ -80,7 +80,7 @@ export default function Add() {
       errors.hobbies = "Select at least one hobby";
     }
 
-    if (!values.course) {
+    if (!values.corse) {
       errors.corse = "Select your course";
     }
 

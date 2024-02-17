@@ -84,9 +84,9 @@ export default function Edit() {
       errors.hobbies = "Select at least one hobby";
     }
 
-    // if (!values.course) {
-    //   errors.course = "Select your course";
-    // }
+    if (!values.corse) {
+      errors.corse = "Select your course";
+    }
 
     if (!values.address) {
       errors.address = "Address is required";
@@ -218,7 +218,7 @@ export default function Edit() {
                       Front End
                     </option>
                   </select>
-                  {/* <span className={Style.error}>{errors?.course}</span> */}
+                  <span className={Style.error}>{errors?.corse}</span>
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Your Address</label>

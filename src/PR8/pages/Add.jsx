@@ -10,7 +10,7 @@ export default function Add() {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    -localStorage.setItem("display", JSON.stringify(display));
+    localStorage.setItem("display", JSON.stringify(display));
   }, [display]);
 
   useEffect(() => {
@@ -18,6 +18,8 @@ export default function Add() {
   }, [hobbies]);
 
   const handleChange = (e) => {
+    // console.log(e.target.value);
+
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
@@ -44,7 +46,7 @@ export default function Add() {
     if (Object.keys(errors).length === 0) {
       localStorage.setItem("display", JSON.stringify([...display, input]));
       alert("Registration Successful");
-      nevigetor("/pr7");
+      nevigetor("/pr8");
     } else {
       setErrors(errors);
     }
@@ -52,6 +54,9 @@ export default function Add() {
 
   const validateForm = (values) => {
     let errors = {};
+
+    // console.log(values);
+    // console.log(values.corse);
 
     if (!values.user) {
       errors.user = "Username is required";
@@ -75,7 +80,7 @@ export default function Add() {
       errors.hobbies = "Select at least one hobby";
     }
 
-    if (!values.corse) {
+    if (!values.course) {
       errors.corse = "Select your course";
     }
 

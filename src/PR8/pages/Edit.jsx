@@ -1,23 +1,36 @@
 import Style from "../styles/Style.module.css";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Await, useNavigate, useParams } from "react-router-dom";
 
-export default function Add() {
+export default function Edit() {
   const nevigetor = useNavigate();
   const [display, setDisplay] = useState(JSON.parse(localStorage.getItem("display")) || []);
   const [input, setInput] = useState({});
   const [hobbies, setHobbies] = useState([]);
+  const [isEdit, setIsEdit] = useState(false);
   const [errors, setErrors] = useState({});
 
+  const prams = useParams();
+  const index = prams.index;
+
   useEffect(() => {
-    -localStorage.setItem("display", JSON.stringify(display));
+    setInput(display[parseInt(index)]);
+    setHobbies(display[parseInt(index)].hobbies || []);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("display", JSON.stringify(display));
+    if (isEdit) {
+      nevigetor("/pr8");
+    }
   }, [display]);
 
-  useEffect(() => {
-    setInput({ ...input, hobbies: hobbies });
-  }, [hobbies]);
+  // useEffect(() => {
+  //   setInput({ ...input, hobbies: hobbies });
+  // }, [hobbies]);
 
   const handleChange = (e) => {
+    console.log(e.target.value);
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
@@ -30,21 +43,17 @@ export default function Add() {
     }
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   localStorage.setItem("display", JSON.stringify([...display, input]));
-  //   alert("Registration Successful");
-  //   nevigetor("/pr7");
-  // };
-
-  const handleSubmit = (e) => {
+  const handleEdit = (e) => {
     e.preventDefault();
-    const errors = validateForm(input);
 
+    const errors = validateForm(input);
     if (Object.keys(errors).length === 0) {
-      localStorage.setItem("display", JSON.stringify([...display, input]));
-      alert("Registration Successful");
-      nevigetor("/pr7");
+      const temp = [...display];
+      temp[index] = { ...input, hobbies };
+      setIsEdit(true);
+      setDisplay(temp);
+      alert("Edited Successful");
+      // nevigetor("/");
     } else {
       setErrors(errors);
     }
@@ -91,20 +100,13 @@ export default function Add() {
       <div className={Style.container}>
         <div className={Style.loginWrap}>
           <div className={Style.loginHtml}>
-            <h2 className={Style.tab}>Sign In</h2>
+            <h2 className={Style.tab}>Edit Data</h2>
 
             <div className={Style.loginForm}>
-              <form onSubmit={handleSubmit} className={Style.signInHtm}>
+              <form onSubmit={handleEdit} className={Style.signInHtm}>
                 <div className={Style.group}>
                   <label className={Style.label}>Your Name</label>
-                  <input
-                    id="user"
-                    type="text"
-                    className={Style.input}
-                    value={input ? input.user : ""}
-                    onChange={handleChange}
-                    name="user"
-                  />
+                  <input id="user" type="text" className={Style.input} value={input.user} onChange={handleChange} name="user" />
                   <span className={Style.error}>{errors?.user}</span>
                 </div>
                 <div className={Style.group}>
@@ -167,7 +169,7 @@ export default function Add() {
                     value={"Reading"}
                     type="checkbox"
                     onChange={handleSelect}
-                    // checked={input.hobbies.includes("Reading") ? true : false}
+                    checked={hobbies.includes("Reading") ? true : false}
                   />
                   <label htmlFor="readding" className="ps-2 pe-10">
                     Reading
@@ -178,7 +180,7 @@ export default function Add() {
                     value={"Cycling"}
                     type="checkbox"
                     onChange={handleSelect}
-                    // checked={input.hobbies.includes("Cycling") ? true : false}
+                    checked={hobbies.includes("Cycling") ? true : false}
                   />
                   <label htmlFor="cycling" className="ps-2 pe-10">
                     Cycling
@@ -189,7 +191,7 @@ export default function Add() {
                     value={"Traveling"}
                     type="checkbox"
                     onChange={handleSelect}
-                    // checked={input.hobbies.includes("Traveling") ? true : false}
+                    checked={hobbies.includes("Traveling") ? true : false}
                   />
                   <label htmlFor="traveling" className="ps-2">
                     Traveling
@@ -199,7 +201,7 @@ export default function Add() {
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Select Course</label>
-                  <select id="corse" className={Style.checkLabel} onChange={handleChange} name="corse">
+                  <select value={input.corse} id="corse" className={Style.checkLabel} onChange={handleChange} name="corse">
                     <option value="" className={Style.checkInput} disabled selected>
                       Select Your Course
                     </option>
@@ -220,7 +222,14 @@ export default function Add() {
                 </div>
                 <div className={Style.group}>
                   <label className={Style.label}>Your Address</label>
-                  <textarea id="address" className={Style.input} rows="3" onChange={handleChange} name="address"></textarea>
+                  <textarea
+                    value={input.address}
+                    id="address"
+                    className={Style.input}
+                    rows="3"
+                    onChange={handleChange}
+                    name="address"
+                  ></textarea>
                   <span className={Style.error}>{errors?.address}</span>
                 </div>
                 <div className={Style.group}>

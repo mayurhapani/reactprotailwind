@@ -40,6 +40,7 @@ export default function Add() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = validateForm(input);
+
     if (Object.keys(errors).length === 0) {
       localStorage.setItem("display", JSON.stringify([...display, input]));
       alert("Registration Successful");

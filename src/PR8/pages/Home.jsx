@@ -8,6 +8,7 @@ export default function Home() {
   const [input, setInput] = useState(display);
   const [searchInput, setSearchInput] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
+  const [isSort, setIsSort] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("display", JSON.stringify(display));
@@ -53,6 +54,18 @@ export default function Home() {
     (user) => user.user.toLowerCase().includes(searchInput.toLowerCase()) && (selectedGender === "" || user.gender === selectedGender)
   );
 
+  const handelShort = () => {
+    if (isSort) {
+      const shorted = [...filteredUsers].sort((a, b) => (a.user > b.user ? 1 : -1));
+      setIsSort(!isSort);
+      setDisplay(shorted);
+    } else {
+      const shorted = [...filteredUsers].sort((a, b) => (a.user < b.user ? 1 : -1));
+      setIsSort(!isSort);
+      setDisplay(shorted);
+    }
+  };
+
   return (
     <>
       <div className={Style.container}>
@@ -61,7 +74,10 @@ export default function Home() {
             <h1 className="text-4xl text-white text-center my-5">User Data</h1>
             <div className="flex justify-between mb-10">
               <div className="">
-                <input onChange={handleSearch} type="text" placeholder="Search from here...." />
+                <button onClick={handelShort} className="text-white border px-8 py-3 mx-5 rounded-md bg-black">
+                  Sort By Name
+                </button>
+                <input onChange={handleSearch} type="text" placeholder="Search By Name here...." />
                 <select onChange={handleGenderSelect} className="mx-5" id="uGender">
                   <option value="" selected disabled>
                     Gender

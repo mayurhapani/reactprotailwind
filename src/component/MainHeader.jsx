@@ -18,6 +18,7 @@ export default function MainHeader() {
             <NavLink to="/pr6">PR6</NavLink>
             <NavLink to="/pr7">PR7</NavLink>
             <NavLink to="/pr8">PR8</NavLink>
+            <NavLink to="/pr9">PR9</NavLink>
             <NavLink to="/tictoktek">TICTOKTEK</NavLink>
           </li>
         </ul>

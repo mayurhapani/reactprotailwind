@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "webpack --config webpack.config.cjs",
-    "start": "webpack serve --config webpack.config.cjs",
+    "build": "vite build",
+    "serve": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

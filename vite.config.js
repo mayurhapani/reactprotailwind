@@ -5,6 +5,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "public", // Ensure this path is correct
+    outDir: "dist", // Ensure this path is correct
   },
 });

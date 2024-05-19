@@ -13,7 +13,6 @@ import PR5 from "./PR5/PR5.jsx";
 import PR6 from "./PR6/PR6.jsx";
 import PR7 from "./PR7/PR7.jsx";
 import PR8 from "./PR8/PR8.jsx";
-import PR9 from "./PR9/PR9.jsx";
 
 import TICTOKTEK from "./TICTOKTEK/TICTOKTEK.jsx";
 
@@ -49,7 +48,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="edit" />
           <Route path="edit/:index" />
         </Route>
-        <Route path="/pr9" element={<PR9 />} />
         <Route path="/tictoktek" element={<TICTOKTEK />} />
       </Routes>
     </BrowserRouter>

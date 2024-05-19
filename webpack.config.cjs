@@ -2,8 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development", // or 'production'
-  entry: "./src/main.jsx", // Change to main.jsx
+  mode: "development",
+  entry: "./src/main.jsx",
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
@@ -21,6 +21,10 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   resolve: {
@@ -28,11 +32,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html", // Path to your index.html file
+      template: "./index.html",
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "public"),
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
     compress: true,
     port: 9000,
   },
